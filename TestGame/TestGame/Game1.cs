@@ -18,7 +18,7 @@ namespace TestGame
     {
         protected int GameSceneNum;
 
-        GraphicsDeviceManager graphics;
+        public GraphicsDeviceManager graphics;
 
         public GameMain()
         {
@@ -35,12 +35,7 @@ namespace TestGame
         protected override void Initialize()
         {
             // TODO: ここに初期化ロジックを追加します。
-            this.graphics.PreferredBackBufferWidth = 800;
-            this.graphics.PreferredBackBufferHeight = 600;
-            this.IsMouseVisible = true;
-
-            this.Components.Add(new StartMenu(this));
-            this.Components.Add(new Player(this));
+            this.Components.Add(new GameScene(this));
 
             base.Initialize();
         }

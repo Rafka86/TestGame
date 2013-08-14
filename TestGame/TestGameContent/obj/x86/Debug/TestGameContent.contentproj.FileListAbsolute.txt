@@ -1,1 +1,2 @@
 X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGameContent\obj\x86\Debug\ResolveAssemblyReference.cache
+X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGameContent\obj\x86\Debug\ResolveAssemblyReference.cache

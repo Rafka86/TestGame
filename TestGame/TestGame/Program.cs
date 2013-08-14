@@ -12,6 +12,9 @@ namespace TestGame
         {
             using (GameMain game = new GameMain())
             {
+                game.graphics.PreferredBackBufferWidth = 800;
+                game.graphics.PreferredBackBufferHeight = 600;
+                game.IsMouseVisible = true;
                 game.Run();
             }
         }

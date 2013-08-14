@@ -2,22 +2,22 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>textures\texture.png</Source>
-      <Name>textures\texture</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGame\bin\x86\Debug\Content\textures\texture.xnb</Output>
-      <Time>2013-07-25T18:24:30.6872928+09:00</Time>
-    </Item>
-    <Item>
       <Source>objects\jiki.png</Source>
       <Name>objects\jiki</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGame\bin\x86\Debug\Content\objects\jiki.xnb</Output>
+      <Output>X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGame\bin\x86\Debug\Content\objects\jiki.xnb</Output>
       <Time>2013-07-27T00:19:26.7516546+09:00</Time>
+    </Item>
+    <Item>
+      <Source>textures\texture.png</Source>
+      <Name>textures\texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGame\bin\x86\Debug\Content\textures\texture.xnb</Output>
+      <Time>2013-07-25T18:24:30.6872928+09:00</Time>
     </Item>
     <Item>
       <Source>Fonts\Font.spritefont</Source>
@@ -25,7 +25,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGame\bin\x86\Debug\Content\Fonts\Font.xnb</Output>
+      <Output>X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGame\bin\x86\Debug\Content\Fonts\Font.xnb</Output>
       <Time>2013-07-27T01:19:44.3805712+09:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -34,10 +34,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGameContent\</RootDirectory>
-      <LoggerRootDirectory>X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGame\</LoggerRootDirectory>
-      <IntermediateDirectory>X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGameContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>X:\マイ ドキュメント\Visual Studio 2010\Projects\TestGame\TestGame\TestGame\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGameContent\</RootDirectory>
+      <LoggerRootDirectory>X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGame\</LoggerRootDirectory>
+      <IntermediateDirectory>X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGameContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>X:\マイ ドキュメント\GitHub\TestGame\TestGame\TestGame\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
