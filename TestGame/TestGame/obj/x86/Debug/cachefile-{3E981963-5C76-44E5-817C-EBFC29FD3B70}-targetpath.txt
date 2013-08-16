@@ -1,3 +1,0 @@
-Content\objects\jiki.xnb
-Content\textures\texture.xnb
-Content\Fonts\Font.xnb
