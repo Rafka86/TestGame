@@ -10,11 +10,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+
 namespace TestGame
 {
-    public class GameScene : MoveObj
+    class StartMenu:MoveObj
     {
-        public GameScene(Game game)
+        public StartMenu(Game game)
             : base(game)
         {
         }
@@ -23,15 +24,13 @@ namespace TestGame
         {
             ObjPos = Vector2.Zero;
 
-            Game.Components.Add(new Player(Game));
-
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            ObjTex = Game.Content.Load<Texture2D>(@"textures\texture");
+            ObjTex = Game.Content.Load<Texture2D>(@"textures\StartMenu");
 
             base.LoadContent();
         }
@@ -57,9 +56,16 @@ namespace TestGame
 
             base.Draw(gameTime);
         }
-
+        
         private void UpdateInput()
         {
+            KeyState = Keyboard.GetState();
+            if (KeyState.IsKeyDown(Keys.Space))
+            {
+                Game.Components.Add(new GameScene(Game));
+
+                this.Dispose();
+            }
         }
     }
 }
