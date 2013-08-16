@@ -16,7 +16,7 @@ namespace TestGame
     /// </summary>
     public class GameMain : Microsoft.Xna.Framework.Game
     {
-        protected int GameSceneNum;
+        public int GameSceneNum, oldGSN;
 
         public GraphicsDeviceManager graphics;
 
@@ -35,7 +35,7 @@ namespace TestGame
         protected override void Initialize()
         {
             // TODO: ここに初期化ロジックを追加します。
-            this.Components.Add(new GameScene(this));
+            this.Components.Add(new StartMenu(this));
 
             base.Initialize();
         }
