@@ -88,6 +88,10 @@ namespace TestGame
                 dir = Vector2.Negate(dir);
                 Vector2.Add(ref ObjPos, ref dir, out ObjPos);
             }
+            if (KeyState.IsKeyDown(Keys.Z))
+            {
+                Game.Components.Add(new Bullet(Game, ObjPos, Vector2.Normalize(dir)));
+            }
         }
     }
 }
