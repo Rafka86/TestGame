@@ -37,7 +37,7 @@ namespace TestGame
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            ObjTex = Game.Content.Load<Texture2D>(@"objects\jiki");
+            ObjTex = Game.Content.Load<Texture2D>(@"objects\Player");
 
             base.LoadContent();
         }
@@ -57,7 +57,7 @@ namespace TestGame
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            spriteBatch.Draw(ObjTex, ObjPos, null, Color.White, angle, new Vector2(ObjTex.Width / 2.0f, ObjTex.Height / 2.0f), 2.0f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(ObjTex, ObjPos, null, Color.White, angle, new Vector2(ObjTex.Width / 2.0f, ObjTex.Height / 2.0f), 1.0f, SpriteEffects.None, 0f);
             spriteBatch.End();
 
             base.Draw(gameTime);
