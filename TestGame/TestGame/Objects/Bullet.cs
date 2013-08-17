@@ -20,7 +20,7 @@ namespace TestGame
             : base(game)
         {
             ObjPos = StartPos;
-            ObjPos.X -= 16.0f; ObjPos.Y -= 16.0f;
+            ObjPos.X -= 8.0f; ObjPos.Y -= 8.0f;
             dir = Dir;
         }
 
@@ -47,6 +47,9 @@ namespace TestGame
         public override void Update(GameTime gameTime)
         {
             ObjPos += Vector2.Multiply(dir, 10.0f);
+
+            DisposeJudge();
+
             base.Update(gameTime);
         }
 
@@ -57,6 +60,11 @@ namespace TestGame
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        private void DisposeJudge()
+        {
+            if (ObjPos.X < 0f || ObjPos.X > 800.0f || ObjPos.Y < 0f || ObjPos.Y > 600.0f) this.Dispose();
         }
     }
 }
