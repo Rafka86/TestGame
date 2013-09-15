@@ -16,6 +16,8 @@ namespace TestGame
     {
         Vector2 Dir, CenterPos, Origin, NormalDir;
 
+        private int count;
+
         float angle;
 
         public Player(Game game)
@@ -32,6 +34,8 @@ namespace TestGame
             ObjPos.X = 400.0f; ObjPos.Y = 300.0f;
             angle = 0;
             Dir = Vector2.Zero;
+
+            count = 0;
 
             base.Initialize();
         }
@@ -101,7 +105,12 @@ namespace TestGame
 
             if (KeyState.IsKeyDown(Keys.Z))
             {
-                Game.Components.Add(new Bullet(Game, CenterPos + Vector2.Multiply(NormalDir, 12.0f), NormalDir));
+                count++;
+                if (count == 5)
+                {
+                    Game.Components.Add(new Bullet(Game, CenterPos + Vector2.Multiply(NormalDir, 12.0f), NormalDir));
+                    count = 0;
+                }
             }
         }
         private void SlowMove()
