@@ -14,9 +14,9 @@ namespace TestGame
 {
     public class Player : MoveObj
     {
-        Vector2 Dir, CenterPos, Origin, NormalDir;
+        Vector2 Dir, Origin, NormalDir;
 
-        private int count;
+        private bool ShotFlag;
 
         float angle;
 
@@ -35,7 +35,7 @@ namespace TestGame
             angle = 0;
             Dir = Vector2.Zero;
 
-            count = 0;
+            ShotFlag = false;
 
             base.Initialize();
         }
@@ -45,7 +45,6 @@ namespace TestGame
             spriteBatch = new SpriteBatch(GraphicsDevice);
             ObjTex = Game.Content.Load<Texture2D>(@"objects\Player");
             Origin = new Vector2(ObjTex.Width / 2.0f, ObjTex.Height / 2.0f);
-            CenterPos = ObjPos + Origin;
 
             base.LoadContent();
         }
@@ -101,17 +100,17 @@ namespace TestGame
                 if (KeyState.IsKeyDown(Keys.LeftShift)) SlowMove();
             }
 
-            CenterPos = ObjPos + Origin;
-
             if (KeyState.IsKeyDown(Keys.Z))
             {
-                count++;
-                if (count == 5)
+                if (!ShotFlag)
                 {
-                    Game.Components.Add(new Bullet(Game, CenterPos + Vector2.Multiply(NormalDir, 12.0f), NormalDir));
-                    count = 0;
+                    Game.Components.Add(new Bullet(Game, ObjPos + Vector2.Multiply(NormalDir, 12.0f), NormalDir));
+                    ShotFlag = true;
                 }
             }
+
+            if (KeyState.IsKeyUp(Keys.Z)) ShotFlag = false;
+
         }
         private void SlowMove()
         {
