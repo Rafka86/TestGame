@@ -69,7 +69,6 @@ namespace TestGame
             // ゲームの終了条件をチェックします。
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)this.Exit();
             // TODO: ここにゲームのアップデート ロジックを追加します。
-
             base.Update(gameTime);
         }
 
