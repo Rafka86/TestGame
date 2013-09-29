@@ -20,6 +20,12 @@ namespace TestGame
 
         float angle;
 
+        public Vector2 Pos
+        {
+            set { ObjPos = value; }
+            get { return ObjPos; }
+        }
+        
         public Player(Game game)
             : base(game)
         {
